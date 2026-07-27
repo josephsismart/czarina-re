@@ -14,7 +14,7 @@ const PROPERTIES = [
     id: 1,
     title: 'Modern 2BR Condo Unit',
     location: 'Butuan City',
-    price: 'â±2,500,000',
+    price: '\u20B12,500,000',
     type: 'Condominium',
     beds: 2,
     baths: 1,
@@ -25,7 +25,7 @@ const PROPERTIES = [
     id: 2,
     title: 'Residential Lot in Subdivision',
     location: 'Butuan City',
-    price: 'â±1,800,000',
+    price: '\u20B11,800,000',
     type: 'Lot',
     beds: null,
     baths: null,
@@ -36,7 +36,7 @@ const PROPERTIES = [
     id: 3,
     title: 'Brand New House & Lot',
     location: 'Agusan del Norte',
-    price: 'â±4,200,000',
+    price: '\u20B14,200,000',
     type: 'House & Lot',
     beds: 3,
     baths: 2,
@@ -47,7 +47,7 @@ const PROPERTIES = [
     id: 4,
     title: 'Commercial Space Downtown',
     location: 'Butuan City',
-    price: 'â±6,500,000',
+    price: '\u20B16,500,000',
     type: 'Commercial',
     beds: null,
     baths: null,
@@ -156,13 +156,13 @@ function App() {
                 and genuine care to every transaction.
               </p>
               <p>
-                As a graduate of <strong>Xavier University {'â'} Ateneo de Cagayan</strong> and a
+                As a graduate of <strong>Xavier University {'\u2013'} Ateneo de Cagayan</strong> and a
                 Licensed Professional Teacher (LPT) with a Master's degree (MPSM), I combine
                 academic rigor with real-world experience to deliver exceptional service.
               </p>
               <p>
                 Under <strong>Property Provider Realty</strong>, I am committed to
-                "Providing The Best We Can!" {'â'} whether you're buying your first home,
+                "Providing The Best We Can!" {'\u2014'} whether you're buying your first home,
                 investing in commercial property, or need a reliable property appraisal.
               </p>
             </div>
@@ -185,7 +185,7 @@ function App() {
                 <GraduationCap size={32} />
                 <div>
                   <h4>LPT | MPSM</h4>
-                  <p>Xavier University {'â'} Ateneo de Cagayan</p>
+                  <p>Xavier University {'\u2013'} Ateneo de Cagayan</p>
                 </div>
               </div>
               <div className="credential-card">
@@ -247,7 +247,7 @@ function App() {
                   ))}
                 </div>
                 <p>"{t.text}"</p>
-                <h4>{'â'} {t.name}</h4>
+                <h4>{'\u2014'} {t.name}</h4>
               </div>
             ))}
           </div>
@@ -327,7 +327,7 @@ function App() {
             <Building2 size={24} />
             <span>CZ Properties</span>
           </div>
-          <p>&copy; 2025 Czarina Van T. Bokingo {'â'} Property Provider Realty. All rights reserved.</p>
+          <p>&copy; 2025 Czarina Van T. Bokingo {'\u2014'} Property Provider Realty. All rights reserved.</p>
         </div>
       </footer>
     </div>
