@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Award, Home, Building2, ChevronRight, Star, GraduationCap, Menu, X, ExternalLink } from 'lucide-react'
+import { Phone, Mail, MapPin, Award, Home, Building2, ChevronRight, Star, GraduationCap, Menu, X, Heart } from 'lucide-react'
 
 const Facebook = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={props.size||24} height={props.size||24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -107,11 +107,10 @@ function App() {
       <section id="hero" className="hero">
         <div className="container hero-content">
           <div className="hero-text">
-            <p className="hero-tag">Licensed Real Estate Broker &bull; Appraiser</p>
+            <p className="hero-tag">Licensed Real Estate Broker & Appraiser</p>
             <h1>Czarina Van T. Bokingo</h1>
             <p className="hero-subtitle">
-              Providing the best real estate solutions in Butuan City and Agusan del Norte.
-              Your trusted partner in finding the perfect property.
+              Your trusted partner in finding the perfect property in Butuan City and Agusan del Norte. Let me help you make your dream home a reality.
             </p>
             <div className="hero-buttons">
               <button className="btn btn-primary" onClick={() => scrollTo('properties')}>
@@ -146,6 +145,7 @@ function App() {
       {/* About */}
       <section id="about" className="about">
         <div className="container">
+          <p className="section-tag">Get to Know Me</p>
           <h2 className="section-title">About Me</h2>
           <div className="about-grid">
             <div className="about-text">
@@ -156,13 +156,13 @@ function App() {
                 and genuine care to every transaction.
               </p>
               <p>
-                As a graduate of <strong>Xavier University â Ateneo de Cagayan</strong> and a
+                As a graduate of <strong>Xavier University {'â'} Ateneo de Cagayan</strong> and a
                 Licensed Professional Teacher (LPT) with a Master's degree (MPSM), I combine
                 academic rigor with real-world experience to deliver exceptional service.
               </p>
               <p>
                 Under <strong>Property Provider Realty</strong>, I am committed to
-                "Providing The Best We Can!" â whether you're buying your first home,
+                "Providing The Best We Can!" {'â'} whether you're buying your first home,
                 investing in commercial property, or need a reliable property appraisal.
               </p>
             </div>
@@ -185,7 +185,7 @@ function App() {
                 <GraduationCap size={32} />
                 <div>
                   <h4>LPT | MPSM</h4>
-                  <p>Xavier University â Ateneo de Cagayan</p>
+                  <p>Xavier University {'â'} Ateneo de Cagayan</p>
                 </div>
               </div>
               <div className="credential-card">
@@ -203,8 +203,9 @@ function App() {
       {/* Properties */}
       <section id="properties" className="properties">
         <div className="container">
+          <p className="section-tag">Explore Listings</p>
           <h2 className="section-title">Featured Properties</h2>
-          <p className="section-subtitle">Explore our curated selection of properties in Butuan City and surrounding areas</p>
+          <p className="section-subtitle">Discover our handpicked selection of premium properties in Butuan City and surrounding areas</p>
           <div className="property-grid">
             {PROPERTIES.map((p) => (
               <div key={p.id} className="property-card">
@@ -234,28 +235,42 @@ function App() {
       {/* Testimonials */}
       <section id="testimonials" className="testimonials">
         <div className="container">
+          <p className="section-tag">Client Stories</p>
           <h2 className="section-title">What Clients Say</h2>
+          <p className="section-subtitle">Hear from families and investors who found their perfect property</p>
           <div className="testimonial-grid">
             {TESTIMONIALS.map((t, i) => (
               <div key={i} className="testimonial-card">
                 <div className="stars">
                   {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} size={16} fill="#d4a843" color="#d4a843" />
+                    <Star key={j} size={16} fill="#c9a84c" color="#c9a84c" />
                   ))}
                 </div>
                 <p>"{t.text}"</p>
-                <h4>â {t.name}</h4>
+                <h4>{'â'} {t.name}</h4>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* CTA Banner */}
+      <section className="cta-banner">
+        <div className="container">
+          <h2>Ready to Find Your Dream Property?</h2>
+          <p>Let me guide you through every step of your real estate journey with care and expertise.</p>
+          <button className="btn btn-gold" onClick={() => scrollTo('contact')}>
+            <Heart size={18} /> Let's Talk Today
+          </button>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="contact">
         <div className="container">
+          <p className="section-tag">Reach Out</p>
           <h2 className="section-title">Get in Touch</h2>
-          <p className="section-subtitle">Ready to find your dream property? Reach out today.</p>
+          <p className="section-subtitle">Ready to start your property journey? I'd love to hear from you.</p>
           <div className="contact-grid">
             <div className="contact-info">
               <a href="tel:09091972507" className="contact-item">
@@ -312,7 +327,7 @@ function App() {
             <Building2 size={24} />
             <span>CZ Properties</span>
           </div>
-          <p>&copy; 2025 Czarina Van T. Bokingo â Property Provider Realty. All rights reserved.</p>
+          <p>&copy; 2025 Czarina Van T. Bokingo {'â'} Property Provider Realty. All rights reserved.</p>
         </div>
       </footer>
     </div>
